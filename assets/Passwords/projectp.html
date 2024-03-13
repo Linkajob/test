@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +60,7 @@
       <label for="verificationCode">Verification Code:</label>
       <input type="text" id="verificationCode" name="verificationCode" autocomplete="off" required>
 
-      <button type="submit">Access Resume</button>
+      <button type="submit">Access Business</button>
     </form>
 
     <p id="verification-message"></p>
@@ -97,7 +98,7 @@
         window.location.href = '../../' + prefix + pageNumber + '.html';
       } else {
         verificationMessage.style.color = 'red';
-        verificationMessage.innerHTML = 'Incorrect verification code. Please try again.';
+        verificationMessage.innerHTML = 'Incorrect verification code. Please contact the concerned authority';
       }
     }
   </script>

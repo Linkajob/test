@@ -1,0 +1,32 @@
+ function subscribe() {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Get the email input value
+        var email = document.getElementById("emailInput").value;
+
+        // You can add additional validation if needed
+
+        // Build the Google Form URL
+        var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSewLnYukXxg28a8nheBA1e9EgkZfd4A2ZpauhW7jHMFh2BwJQ/formResponse";
+
+        // Use fetch API to send data to Google Form
+        fetch(googleFormURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: "entry.1387919267=" + email, // Adjust this line based on your form fields
+        })
+        .then(response => response.json())
+        .then(result => {
+            // Handle the response if needed
+
+            // Show the success message and hide the form
+            document.getElementById("newsletterForm").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+        })
+        .catch(error => {
+            console.error("Error sending data to Google Form:", error);
+        });
+    }

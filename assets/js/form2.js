@@ -1,7 +1,7 @@
  function submitForm() {
             // Perform form submission (you may want to add validation here)
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSccMKytLQGKMuzkg91Z1nQzr5sh1-K4xRk7cFqu_68My8dFvA/formResponse", true);
+            xhr.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSc3fjPDh8BW8lwJonCtiyZ9N1B5M8VWMxGii97Z5yRO7SXkSQ/formResponse", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             var formData = new FormData(document.getElementById("myForm"));
             xhr.send(new URLSearchParams(formData).toString());

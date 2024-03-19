@@ -1,28 +1,36 @@
-// Function to submit the form data using AJAX
-function subscribe() {
-    var email = document.getElementById("emailInput").value;
-    if (!isValidEmail(email)) {
-        alert("Please enter a valid email address.");
-        return;
+document.addEventListener("DOMContentLoaded", function() {
+    // Get form elements
+    var form = document.getElementById("newsletterForm");
+    var emailInput = document.getElementById("emailInput");
+    var successMessage = document.getElementById("successMessage");
+    var errorMessage = document.getElementById("errorMessage");
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Create FormData object to collect form data
+        var formData = new FormData(form);
+
+        // Send form data using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSewLnYukXxg28a8nheBA1e9EgkZfd4A2ZpauhW7jHMFh2BwJQ/formResponse");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Form submitted successfully
+                    form.style.display = "none"; // Hide the form
+                    successMessage.style.display = "block"; // Show the success message
+                } else {
+                    // Error submitting form
+                    console.error("Error submitting form: " + xhr.status);
+                    errorMessage.style.display = "block"; // Show error message
+                }
+            }
+        };
+        xhr.send(formData); // Send form data
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSewLnYukXxg28a8nheBA1e9EgkZfd4A2ZpauhW7jHMFh2BwJQ/formResponse");
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var formData = new FormData();
-    formData.append("entry.1387919267", email); // Using the provided field ID
-    xhr.send(new URLSearchParams(formData).toString());
-
-    // Display success message
-    document.getElementById("newsletterForm").style.display = "none";
-    document.getElementById("successMessage").style.display = "block";
-}
-
-function isValidEmail(email) {
-    // Basic email validation
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-}
-
-// Attach click event listener to the submit button
-document.getElementById("submitButton").addEventListener("click", subscribe);
+    // Add event listener to form submission
+    form.addEventListener("submit", handleSubmit);
+});

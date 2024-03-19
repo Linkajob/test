@@ -1809,6 +1809,11 @@ button {
     align-items: center;
     gap: 3rem;
 }
+.img-fluid {
+    width: 180x; 
+    height: 180px; /Image logo Bottom/
+}
+
 
 .job-details__card--head .logo {
     border: 1px solid;

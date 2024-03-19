@@ -1,32 +1,28 @@
- function subscribe() {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-
-        // Get the email input value
-        var email = document.getElementById("emailInput").value;
-
-        // You can add additional validation if needed
-
-        // Build the Google Form URL
-        var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSewLnYukXxg28a8nheBA1e9EgkZfd4A2ZpauhW7jHMFh2BwJQ/formResponse";
-
-        // Use fetch API to send data to Google Form
-        fetch(googleFormURL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: "entry.1387919267=" + email, // Adjust this line based on your form fields
-        })
-        .then(response => response.json())
-        .then(result => {
-            // Handle the response if needed
-
-            // Show the success message and hide the form
-            document.getElementById("newsletterForm").style.display = "none";
-            document.getElementById("successMessage").style.display = "block";
-        })
-        .catch(error => {
-            console.error("Error sending data to Google Form:", error);
-        });
+// Function to submit the form data using AJAX
+function subscribe() {
+    var email = document.getElementById("emailInput").value;
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
     }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSewLnYukXxg28a8nheBA1e9EgkZfd4A2ZpauhW7jHMFh2BwJQ/formResponse");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var formData = new FormData();
+    formData.append("entry.1387919267", email); // Using the provided field ID
+    xhr.send(new URLSearchParams(formData).toString());
+
+    // Display success message
+    document.getElementById("newsletterForm").style.display = "none";
+    document.getElementById("successMessage").style.display = "block";
+}
+
+function isValidEmail(email) {
+    // Basic email validation
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Attach click event listener to the submit button
+document.getElementById("submitButton").addEventListener("click", subscribe);

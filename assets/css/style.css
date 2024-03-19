@@ -1813,6 +1813,11 @@ button {
     width: 180x; 
     height: 180px; /Image logo Bottom/
 }
+.gmail-email {
+    color: #007bff; /* Blue color similar to Gmail link color */
+    /* Add any other styling as desired */
+}
+
 
 
 .job-details__card--head .logo {

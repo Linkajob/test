@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robaj Get Listed</title>
+    <title>Robaj New Investor</title>
 
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 
@@ -29,7 +29,7 @@
 
     <!-- main style file -->
     <link rel="stylesheet" href="./assets/css/style.css">
- <link rel="stylesheet" href="./assets/css/forma.css">
+ <link rel="stylesheet" href="./assets/css/form.css">
 
 
 </head>
@@ -57,7 +57,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                        </nav>
+                
+                    
+        </nav>
     </header>
     <!-- navBar section end here -->
 
@@ -67,12 +69,12 @@
         <div class="container">
             <div class="row">
                 <div class="col" data-aos="zoom-in">
-                    <h1 class="heading-1 text-primary">Get Listed</h1>
+                    <h1 class="heading-1 text-primary">New Investor</h1>
                     <div class="mt-20">
                         <nav class="breadcrumb-sec__links">
                             <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Get listed</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">New Investor</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -92,79 +94,76 @@
                                 Form
                             </span>
                         </h2>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSccMKytLQGKMuzkg91Z1nQzr5sh1-K4xRk7cFqu_68My8dFvA/formResponse" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="entry.1516934713" required><br>
+   <section>
+                             <form id="investorForm" action="https://docs.google.com/forms/d/e/1FAIpQLSccMKytLQGKMuzkg91Z1nQzr5sh1-K4xRk7cFqu_68My8dFvA/formResponse" method="post" onsubmit="return submitForm()">
+                            <h3>Personal Information</h3>
+                            <label for="entry.1516934713">Full Name:</label>
+                            <input type="text" id="entry.1516934713" name="entry.1516934713" required>
 
-        <label for="age">Your Age:</label><br>
-        <input type="number" id="age" name="entry.1341606982" required><br>
+                            <label for="entry.1341606982">Your Age:</label>
+                            <input type="text" id="entry.1341606982" name="entry.1341606982" required>
 
-        <label for="gender">Your Gender:</label><br>
-        <input type="radio" id="male" name="entry.1505404372" value="Male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="entry.1505404372" value="Female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="entry.1505404372" value="Other">
-        <label for="other">Other</label>
-        <input type="radio" id="prefer-not-to-say" name="entry.1505404372" value="Prefer Not to say">
-        <label for="prefer-not-to-say">Prefer Not to say</label><br>
+                            <label for="entry.1505404372">Your Gender:</label>
+                            <select id="entry.1505404372" name="entry.1505404372" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer Not to say">Prefer Not to Say</option>
+                            </select>
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="entry.1225448988" required><br>
+                            <label for="entry.1225448988">Email Address:</label>
+                            <input type="email" id="entry.1225448988" name="entry.1225448988" required>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="entry.1688037581" required><br>
+                            <label for="entry.1688037581">Phone Number:</label>
+                            <input type="tel" id="entry.1688037581" name="entry.1688037581" required>
 
-        <label for="country">Country of Residence:</label><br>
-        <input type="text" id="country" name="entry.1729809111" required><br>
+                            <label for="entry.1729809111">Country of Residence:</label>
+                            <input type="text" id="entry.1729809111" name="entry.1729809111" required>
 
-        <label for="business">Do you owe any business?</label><br>
-        <input type="radio" id="business-yes" name="entry.357621368" value="Yes">
-        <label for="business-yes">Yes</label>
-        <input type="radio" id="business-no" name="entry.357621368" value="No">
-        <label for="business-no">No</label><br>
+                            <h3>Business Information</h3>
+                            <label for="entry.357621368">Do you owe any business?</label>
+                            <select id="entry.357621368" name="entry.357621368" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
 
-        <label for="business-name">Business Name:</label><br>
-        <input type="text" id="business-name" name="entry.468183330"><br>
+                            <label for="entry.468183330">Business Name:</label>
+                            <input type="text" id="entry.468183330" name="entry.468183330">
 
-        <label for="business-location">Business Location (Headquarters):</label><br>
-        <input type="text" id="business-location" name="entry.1779790971"><br>
+                            <label for="entry.1779790971">Business Location (Headquarters):</label>
+                            <input type="text" id="entry.1779790971" name="entry.1779790971">
 
-        <label for="investment-amount">What is your potential amount to invest in a starting business or a running business? (For investing in the shares)</label><br>
-        <input type="radio" id="amount1" name="entry.2021082139" value="NRs 1,000 - 5,000">
-        <label for="amount1">NRs 1,000 - 5,000</label><br>
-        <input type="radio" id="amount2" name="entry.2021082139" value="NRs 5,000 - 10,000">
-        <label for="amount2">NRs 5,000 - 10,000</label><br>
-        <input type="radio" id="amount3" name="entry.2021082139" value="NRs 10,000 - 20,000">
-        <label for="amount3">NRs 10,000 - 20,000</label><br>
-        <input type="radio" id="amount4" name="entry.2021082139" value="NRs 20,000 - 50,000">
-        <label for="amount4">NRs 20,000 - 50,000</label><br>
-        <input type="radio" id="amount5" name="entry.2021082139" value="NRs 50,000 - 100,000">
-        <label for="amount5">NRs 50,000 - 100,000</label><br>
-        <input type="radio" id="amount6" name="entry.2021082139" value="NRs 100,000 - 500,000">
-        <label for="amount6">NRs 100,000 - 500,000</label><br>
-        <input type="radio" id="amount7" name="entry.2021082139" value="NRs 500,000+">
-        <label for="amount7">NRs 500,000+</label><br>
+                            <label for="entry.2021082139">Potential Amount to Invest:</label>
+                            <select id="entry.2021082139" name="entry.2021082139" required>
+                                <option value="NRs 1,000 - 5,000">NRs 1,000 - 5,000</option>
+                                <option value="NRs 5,000 - 10,000">NRs 5,000 - 10,000</option>
+                                <option value="NRs 10,000 - 20,000">NRs 10,000 - 20,000</option>
+                                <option value="NRs 20,000 - 50,000">NRs 20,000 - 50,000</option>
+                                <option value="NRs 50,000 - 100,000">NRs 50,000 - 100,000</option>
+                                <option value="NRs 100,000 - 500,000">NRs 100,000 - 500,000</option>
+                                <option value="NRs 500,000+">NRs 500,000+</option>
+                            </select>
 
-        <label for="categories-prefer">Investment Categories you prefer:</label><br>
-        <input type="text" id="categories-prefer" name="entry.1063449069"><br>
+                            <label for="entry.1063449069">Investment Categories you prefer:</label>
+                            <input type="text" id="entry.1063449069" name="entry.1063449069">
 
-        <label for="categories-avoid">Investment Categories you avoid:</label><br>
-        <input type="text" id="categories-avoid" name="entry.1903155268"><br>
+                            <label for="entry.1903155268">Investment Categories you avoid:</label>
+                            <input type="text" id="entry.1903155268" name="entry.1903155268">
 
-        <label for="specific-business">Any specific Business listed in our website you want to invest in?</label><br>
-        <input type="text" id="specific-business" name="entry.1515505054"><br><br>
+                            <label for="entry.1515505054">Any specific Business listed in our website you want to invest in?</label>
+                            <input type="text" id="entry.1515505054" name="entry.1515505054">
 
-        <input type="submit" value="Submit">
-    </form>
-
-    <div class="thank-you-message" id="thankYouMessage">Thank you for submitting your business listing to ROBAJ! Your response is greatly appreciated, and we look forward to connecting with you soon.
-
-    </div>
-</section>
+                            <button type="submit">Submit</button>
+                        </form>
+                        <div class="thank-you-message" id="thankYouMessage" style="display:none;">Thank you for choosing our platform. We appreciate your interest and will be in touch soon to discuss potential investment opportunities further.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
    
-    <!-- footer star here -->
+      <!-- footer star here -->
 <section id="footer">
     <footer class="footer mt-120">
         <div class="container">
@@ -211,7 +210,6 @@
 
 
 
-
     <!-- jQuary file -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
@@ -233,7 +231,7 @@
 
     <!-- main js file -->
     <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/form2.js"></script>
+    <script src="./assets/js/form3.js"></script>
 
 </body>
 

@@ -1,13 +1,7 @@
-/* style.css */
-
 /* Reset default margin and padding */
 body {
     margin: 0;
     padding: 0;
-}
-
-/* Set a background image and font family */
-body {
     font-family: 'Arial', sans-serif;
     background: url('fashion_background.jpg') no-repeat center center fixed;
     background-size: cover;

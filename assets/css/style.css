@@ -928,10 +928,46 @@ button {
     align-items: center;
     gap: 2.2rem;
 }
+/* CSS for the image */
 .featured__card--head img {
-    width: 76px;
-    height: 76px;
+    width: 76px; /* Default width */
+    height: 76px; /* Default height */
 }
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    /* Adjust dimensions for smaller screens */
+    .featured__card--head img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Adjust dimensions for medium screens */
+    .featured__card--head img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 812px) {
+    /* Adjust dimensions for iPhone 11 and similar devices */
+    .featured__card--head img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 813px) and (max-width: 992px) {
+    /* Additional adjustments for larger screens */
+    .featured__card--head img {
+        width: 76px;
+        height: 76px;
+    }
+}
+
+/* Add more media queries for larger screens if necessary */
 
 
 @media (max-width: 1199.98px) {

@@ -930,39 +930,17 @@ button {
 }
 /* Default styles for the image */
 .featured__card--head img {
-    width: 76px; /* Default width */
-    height: 76px; /* Default height */
+    width: 76px; 
+    height: 76px; 
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 576px) {
-    .featured__card--head img {
-        width: 50px;
-        height: 50px;
-    }
-}
+/* Responsive adjustments for iPhone 11 */
 @media only screen 
-    and (max-width: 414px)
-    and (-webkit-min-device-pixel-ratio: 2) { /* targeting iPhone 11 viewport with CSS Pixel Ratio 2 */
+    and (max-width: 414px) /* Targeting iPhone 11 viewport width */
+    and (-webkit-min-device-pixel-ratio: 2) { /* Targeting CSS Pixel Ratio 2 */
     .featured__card--head img {
-        width: 50px; /* Adjusted width for iPhone 11 */
-        height: 50px; /* Adjusted height for iPhone 11 */
-    }
-}
-
-/* Responsive adjustments for medium screens */
-@media (min-width: 577px) and (max-width: 992px) {
-    .featured__card--head img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* Responsive adjustments for large screens */
-@media (min-width: 993px) {
-    .featured__card--head img {
-        width: 76px;
-        height: 76px;
+        width: 58px; /* Adjusted width for iPhone 11 */
+        height: 58px; /* Adjusted height for iPhone 11 */
     }
 }
 

@@ -930,17 +930,19 @@ button {
 }
 /* Default styles for the image */
 .featured__card--head img {
-    width: 76px; 
-    height: 76px; 
+    width: 76px; /* Default width */
+    height: 76px; /* Default height */
 }
 
-/* Responsive adjustments for iPhone 11 */
+/* Responsive adjustments for iPhone 11 (CSS Pixel Ratio 2) */
 @media only screen 
     and (max-width: 414px) /* Targeting iPhone 11 viewport width */
-    and (-webkit-min-device-pixel-ratio: 2) { /* Targeting CSS Pixel Ratio 2 */
+    and (-webkit-min-device-pixel-ratio: 2), /* Targeting CSS Pixel Ratio 2 */
+    /* Adding media query for non-webkit browsers */
+    only screen and (max-width: 414px) and (min-resolution: 2dppx) { 
     .featured__card--head img {
-        width: 58px; /* Adjusted width for iPhone 11 */
-        height: 58px; /* Adjusted height for iPhone 11 */
+        width: 152px; /* Adjusted width for iPhone 11 */
+        height: 152px; /* Adjusted height for iPhone 11 */
     }
 }
 

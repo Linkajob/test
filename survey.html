@@ -1,79 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding-top: 40px; /* Add some space after the banner */
-        }
 
-        #topBanner {
-            background-color: #3498db;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            font-size: 28px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the shadow values for your preference */
-        }
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 
-        #topBanner span {
-            color: white;
-        }
+    <!-- font-awesome file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-        h1 {
-            color: #333;
-        }
+    <!-- aos css file  -->
+    <link rel="stylesheet" href="./assets/css/aos.css">
 
-        p {
-            color: #555;
-        }
+    <!-- wow css file -->
+    <link rel="stylesheet" href="./assets/css/animate.css">
 
-        .content {
-            text-align: center;
-            max-width: 600px;
-            padding: 20px; /* Additional styles for the rest of your content */
-        }
+    <!-- owl-carousel css file  -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
 
-        .survey-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+    <!-- nice select css file -->
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
 
-        .survey-button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <!-- bootstrap style file -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- main style file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="stylesheet" href="./assets/css/form.css">
+
+
 </head>
+
 <body>
-    <div id="topBanner">
-        RO<span>BAJ</span>
+
+    <!-- scroll top btn -->
+    <div class="scrtop">
+        <button class="scrtopBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
     </div>
 
-    <div class="content">
-        <h1>Welcome!</h1>
-        <p>You want to invest in a business? This may be the start of something New and BIG!</p>
-        <a href="https://forms.gle/sHqZbppVE5zRoiy16" class="survey-button">Start Survey</a>
-    </div>
+    <!-- navBar section start here -->
+    <header class="navBar-section">
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <div>
+                        <img class="w-100 img-fluid" src="./assets/images/logo.png" alt="logo">
+                    </div>
+                </a>
+                <!--  navbar toggle btn   -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                    
+        </nav>
+    </header>
+    <!-- navBar section end here -->
+
+
+    <!-- breadcrumb start here -->
+    <section class="breadcrumb-sec py-115">
+        <div class="container">
+            <div class="row">
+                <div class="col" data-aos="zoom-in">
+                    <h1 class="heading-1 text-primary">Survey Form</h1>
+                    <div class="mt-20">
+                        <nav class="breadcrumb-sec__links">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Survey Form</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb end here -->
+
+     <section>
+   
+                <div class="col-lg-7 m-auto">
+</div>
+                    <div class="text-center">
+                        <h2 class="heading-2 wow fadeInDown">Fill The 
+                            <span>
+                                Form
+                            </span>
+                        </h2>
+   <section>
+                             <form id="investorForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfrCvdwtKB5jSJOVyr0ZG2RBnG5Ei_RXmEcG7BHdfvczHoe8g/formResponse" method="post" onsubmit="return submitForm()">
+                            <h3>Personal Information</h3>
+                            <label for="entry.1860752915">Full Name:</label>
+                            <input type="text" id="entry.1860752915" name="entry.1860752915" required>
+
+                            <label for="entry.1434750584">Your Age:</label>
+                            <input type="text" id="entry.1434750584" name="entry.1434750584" required>
+
+                            <label for="entry.247496593">Your Gender:</label>
+                            <select id="entry.247496593" name="entry.247496593" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer Not to say">Prefer Not to Say</option>
+                            </select>
+
+                            <label for="entry.1915728961">Email Address:</label>
+                            <input type="email" id="entry.1915728961" name="entry.1915728961" required>
+                            <label for="entry.1677266975">Any job/ Business experience?</label>
+
+                            <select id="entry.1677266975" name="entry.1677266975" required>
+        <option value="">Select one</option>
+        <option value="Job">Job</option>
+        <option value="Business">Business</option>
+        <option value="Both">Both job & business</option>
+        <option value="None">None</option>
+        <option value="Other">Other</option>
+    </select>
+
+                           
+
+                         
+                            <label for="entry.1481104943">Do you want to start any business?</label>
+                            <select id="entry.1481104943 name="entry.1481104943" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                           <label for="entry.651297124">What type of business you want to start ?</label>
+                            <input type="text" id="entry.651297124" name="entry.651297124">
+
+
+                            <label for="entry.910669632">Are you ready for collaboration with other?</label>
+                            <select id="entry.910669632" name="entry.910669632" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+
+                            <label for="entry.8251744">Investment Amount you can Afford</label>
+                            <input type="text" id="entry.8251744" name="entry.8251744">
+
+
+                            <label for="entry.1433346575">What resources or support do you feel you need From ROBAJ , whether it's mentorship, access to funding, or networking opportunities?</label>
+                            <input type="text" id="entry.1433346575" name="entry.1433346575">
+
+                                                       <button type="submit">Submit</button>
+                        </form>
+                        <div class="thank-you-message" id="thankYouMessage" style="display:none;">Thank you for taking our survey. We appreciate your participation! We'll be reaching out to you soon to discuss further opportunities.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+      <!-- footer star here -->
+<section id="footer">
+    <footer class="footer mt-120">
+        <div class="container">
+            <div class="row justify-content-evenly g-4 g-sm-5 g-md-0">
+                <div class="col-md-4 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div>
+                        <img class="img-fluid1" src="./assets/images/logo.png" alt="logo">
+                    </div>
+                    <p class="mt-20">Let Your Idea Meet the Investment.</p>
+                </div>
+                <div class="col-md-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">
+                    <h3 class="heading-3">Need Help!</h3>
+                    <div class="mt-20">
+                        
+                        <p class="mt-2"><a href="mailto:Contact@robaj.com" class="gmail-email">Contact@robaj.com</a></p>
+
+                    </div>
+                </div>
+                <div class="col-md-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3 class="heading-3">Follow Us</h3>
+                    <div class="social mt-20">
+                        <a href="https://wa.me/message/O6D7TDZAFU2XJ1">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/robajnepal?igsh=MW41ZmtiajZ1OWUwbg==">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/robaj-9b2a002ba/">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-55 border-top">
+                <div class="col text-center mt-25 pb-5 wow fadeInDown">
+                    <p class="text-figure">© 2024 ROBAJ. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+    <!-- footer end here -->
+
+
+
+    <!-- jQuary file -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+
+    <!-- owl-carousel js file -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+
+    <!-- bootstrap js file -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- aos js file -->
+    <script src="./assets/js/aos.js"></script>
+
+    <!-- wow js file -->
+    <script src="./assets/js/wow.min.js"></script>
+
+    <!-- nice select js file -->
+    <script src="./assets/js/jquery.nice-select.js"></script>
+
+    <!-- main js file -->
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/form4.js"></script>
+
 </body>
+
 </html>
